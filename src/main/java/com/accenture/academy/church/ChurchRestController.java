@@ -2,6 +2,7 @@ package com.accenture.academy.church;
 
 import com.accenture.academy.exceptions.ChurchNotFindException;
 import jakarta.servlet.http.Cookie;
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -43,7 +44,7 @@ public class ChurchRestController {
         }
     }
     @PostMapping
-    public ChurchDto addChurch(@RequestBody ChurchDto churchDto){
+    public ChurchDto addChurch(@RequestBody @Valid ChurchDto churchDto){
         churchService.addChurch(churchDto);
         return churchDto;
     }

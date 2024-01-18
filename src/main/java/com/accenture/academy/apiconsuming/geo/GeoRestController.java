@@ -21,6 +21,7 @@ public class GeoRestController {
 
     @GetMapping
     public Geo getGeo(@RequestParam String ip) throws IOException, InterruptedException {
+
         Geo geo = GeoClient.getGeo(ip);
         log.info(String.valueOf(geo));
         geoService.saveGeo(geo);

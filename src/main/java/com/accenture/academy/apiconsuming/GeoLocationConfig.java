@@ -1,4 +1,4 @@
-package com.accenture.academy.apiconsuming.geolocation;
+package com.accenture.academy.apiconsuming;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -9,5 +9,4 @@ import org.springframework.context.annotation.Configuration;
 @Data
 public class GeoLocationConfig {
     private String apikey;
-    private String apikey2;
 }

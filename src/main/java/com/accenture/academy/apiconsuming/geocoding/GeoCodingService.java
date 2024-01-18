@@ -1,8 +1,7 @@
 package com.accenture.academy.apiconsuming.geocoding;
 
 
-import com.accenture.academy.apiconsuming.geolocation.GeoLocationConfig;
-import com.accenture.academy.apiconsuming.zipcode.ZipCode;
+import com.accenture.academy.apiconsuming.GeoLocationConfig;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
@@ -21,14 +20,14 @@ import java.net.http.HttpResponse;
 public class GeoCodingService {
 
     private final GeoLocationConfig config;
+    private final HttpClient httpClient;
     @PostConstruct
     void getGeoLocation() throws IOException, InterruptedException {
-        HttpClient httpClient = HttpClient.newHttpClient();
 
         HttpRequest httpRequest = HttpRequest
                 .newBuilder()
                 .GET()
-                .uri(URI.create("https://api.geoapify.com/v1/geocode/search?text=38%20Upper%20Montagu%20Street%2C%20Westminster%20W1H%201LJ%2C%20United%20Kingdom&apiKey="+ config.getApikey2()))
+                .uri(URI.create("https://api.geoapify.com/v1/geocode/search?text=38%20Upper%20Montagu%20Street%2C%20Westminster%20W1H%201LJ%2C%20United%20Kingdom&apiKey="+ config.getApikey()))
                 .build();
         HttpResponse httpResponse = httpClient.send(httpRequest, HttpResponse.BodyHandlers.ofString());
         String response = httpResponse.body().toString();
