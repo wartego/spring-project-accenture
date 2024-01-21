@@ -1,6 +1,7 @@
 package com.accenture.academy.priest;
 
 import com.accenture.academy.exceptions.PriestNotFoundException;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,15 +21,15 @@ public class PriestRestController {
     }
     @PostMapping
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public PriestDao savePriest(@RequestBody PriestDao priestDao){
-        priestService.addPriest(priestDao);
-        return priestDao;
+    public PriestDto savePriest(@RequestBody @Valid PriestDto priestDto){
+        priestService.addPriest(priestDto);
+        return priestDto;
     }
 
     @GetMapping("/search/")
     @ResponseStatus(HttpStatus.OK)
     public PriestDao findPriestById(@RequestParam(value = "id") Long id ){
-            return priestService.getPriestByID(id);
+        return priestService.getPriestByID(id);
     }
 
     @GetMapping("/")

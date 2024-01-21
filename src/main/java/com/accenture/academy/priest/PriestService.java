@@ -17,8 +17,8 @@ public class PriestService {
         return priestRepository.findAll();
     }
 
-    public void addPriest(PriestDao PriestDao) {
-        priestRepository.save(PriestDao);
+    public void addPriest(PriestDto priestDto) {
+        priestRepository.save(PriestMapper.mapDtoToDao(priestDto));
     }
 
     public PriestDao getPriestByID(Long id) {
