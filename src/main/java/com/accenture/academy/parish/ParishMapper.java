@@ -1,11 +1,8 @@
 package com.accenture.academy.parish;
 
-import com.accenture.academy.priest.PriestDao;
-import com.accenture.academy.priest.PriestDto;
-
 public class ParishMapper {
 
-    public static ParishDao mapDtoToDao(ParishDto parishDto){
+    public static ParishDao mapDtoToDao(ParishDto parishDto) {
         ParishDao parishDao = new ParishDao();
 
         parishDao.setPriestDao(parishDto.getPriestDao());

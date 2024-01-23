@@ -1,7 +1,5 @@
 package com.accenture.academy.priest;
 
-import com.accenture.academy.church.ChurchDao;
-import com.accenture.academy.church.ChurchDto;
 
 public class PriestMapper {
 

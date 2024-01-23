@@ -21,7 +21,6 @@ public class ParishDao {
     private PriestDao priestDao;
     @OneToOne(cascade = CascadeType.ALL)
     private ChurchDao churchDao;
-
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "parish_id")
     private Set<MemberDao> members;

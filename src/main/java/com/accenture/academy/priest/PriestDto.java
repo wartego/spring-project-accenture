@@ -1,6 +1,6 @@
 package com.accenture.academy.priest;
 
-import jakarta.persistence.Embedded;
+
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;

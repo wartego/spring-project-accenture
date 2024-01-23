@@ -14,7 +14,6 @@ public class ChurchService {
         this.churchRepository = churchRepository;
     }
 
-
     public List<ChurchDao> getAllChurches() {
         return churchRepository.findAll();
     }
@@ -22,18 +21,17 @@ public class ChurchService {
     public void addChurch(ChurchDao churchDao) {
         churchRepository.save(churchDao);
     }
+
     public void addChurch(ChurchDto churchDto) {
         churchRepository.save(ChurchMapper.mapDtoToDao(churchDto));
     }
 
     public ChurchDao getChurchById(Long id) {
-        return churchRepository
-                .findById(id)
-                .orElseThrow(() -> new ChurchNotFindException("Church with id: " + id + " not found!"));
+        return churchRepository.findById(id).orElseThrow(() -> new ChurchNotFindException("Church with id: " + id + " not found!"));
     }
 
-    public void updateChurch( ChurchDto churchDto, Long id) {
-        churchRepository.save(ChurchMapper.mapDtoToDao(churchDto,id));
+    public void updateChurch(ChurchDto churchDto, Long id) {
+        churchRepository.save(ChurchMapper.mapDtoToDao(churchDto, id));
     }
 
     public void deleteChurchById(Long id) {

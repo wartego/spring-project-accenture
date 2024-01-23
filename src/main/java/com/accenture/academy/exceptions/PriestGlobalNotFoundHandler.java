@@ -28,14 +28,12 @@ public class PriestGlobalNotFoundHandler {
         return invalidParamException.getMessage();
     }
 
-
 //    @ResponseBody
 //    @ResponseStatus(HttpStatus.BAD_REQUEST)
 //    @ExceptionHandler(BindException.class)
 //    public List<FieldError> bindExceptionHandler(BindException bindException){
 //        return bindException.getBindingResult().getFieldErrors();
 //    }
-
 
     @ResponseBody
     @ResponseStatus(HttpStatus.BAD_REQUEST)

@@ -11,7 +11,7 @@ import java.util.Optional;
 public class ParishRepository {
     private final IParishRepository iParishRepository;
 
-    public List<ParishDao> getAll(){
+    public List<ParishDao> getAll() {
         return iParishRepository.findAll();
     }
 
