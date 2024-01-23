@@ -9,6 +9,5 @@ import java.util.Optional;
 public interface IPriestRepository extends JpaRepository<PriestDao,Long> {
     @Query("select p from PriestDao p where p.name = ?1")
     Optional<PriestDao> getByName(String name);
-
     Optional<PriestDao> getByHeight(Double height);
 }

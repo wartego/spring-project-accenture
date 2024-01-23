@@ -1,5 +1,6 @@
 package com.accenture.academy.priest;
 
+import jakarta.persistence.Embedded;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
@@ -17,4 +18,6 @@ public class PriestDto {
     @Min(value = 18, message = "Age must be greater then 18")
 
     private Integer age;
+
+
 }

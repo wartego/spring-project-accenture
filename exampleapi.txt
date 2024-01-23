@@ -1,0 +1,27 @@
+api/parishes POST
+{
+        "priestDao": {
+            "name": "Jerzy",
+            "height": 160.0,
+            "age": 65
+        },
+        "churchDao": {
+            "name": "Kościół św. Jakuba",
+            "nameOfCity": "Skierniewice",
+            "numberOfSeats": 80,
+            "numberOfMembers": 50000,
+            "budget": 240.0
+        },
+        "members": [
+            {
+                "firstName": "Marcin2",
+                "lastName": "NieMarcin2",
+                "dateOfBirth": "28-06-1993"
+            },
+            {
+                "firstName": "Maciej3",
+                "lastName": "NieMaciej3",
+                "dateOfBirth": "28-06-1993"
+            }
+        ]
+}

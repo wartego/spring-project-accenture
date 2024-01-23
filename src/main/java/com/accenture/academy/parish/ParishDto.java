@@ -13,5 +13,5 @@ public class ParishDto {
 
     private PriestDao priestDao;
     private ChurchDao churchDao;
-    private Set<MemberDao> memberDaoSet;
+    private Set<MemberDao> members;
 }

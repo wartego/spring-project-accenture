@@ -27,10 +27,11 @@ public class ParishRestController {
     }
 
     @PostMapping
-    public void addParish(@RequestBody ParishDto parishDto){
-        PriestDao priestByID = priestService.getPriestByID(parishDto.getPriestDao().getId());
-        ChurchDao churchById = churchService.getChurchById(parishDto.getChurchDao().getId());
+    public ParishDto addParish(@RequestBody ParishDto parishDto){
+//        PriestDao priestByID = priestService.getPriestByID(parishDto.getPriestDao().getId());
+//        ChurchDao churchById = churchService.getChurchById(parishDto.getChurchDao().getId());
         parishService.addParish(parishDto);
+        return parishDto;
     }
 
     @PutMapping("/{id}")

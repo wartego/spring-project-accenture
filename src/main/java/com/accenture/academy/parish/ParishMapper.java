@@ -10,7 +10,7 @@ public class ParishMapper {
 
         parishDao.setPriestDao(parishDto.getPriestDao());
         parishDao.setChurchDao(parishDto.getChurchDao());
-        parishDao.setMembers(parishDto.getMemberDaoSet());
+        parishDao.setMembers(parishDto.getMembers());
 
         return parishDao;
     }
